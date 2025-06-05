@@ -1,4 +1,4 @@
-""" This script defines a square and a double function """
+""" This script defines a few small mathematical function """
 
 def square(number):
     """ This function returns the square of a given number """
