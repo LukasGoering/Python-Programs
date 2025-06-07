@@ -89,6 +89,33 @@ def delete_transaction(transaction_id):
             return redirect(url_for('get_transactions')) # Refreshes the transaction list
 
 
+@app.route('/search', methods=['GET', 'POST'])
+def search_transactions():
+    ''' This function allows filtering the transaction list by the amount.
+        GET: Opens webpage with a form to enter the minimum and maximum amount.
+        POST: Displays the filtered transaction list.
+        Input format: Both minimum and maximum amounts should be numeric values.
+    '''
+    if request.method == 'GET':
+        return render_template('search.html')
+
+    if request.method == 'POST':
+        # Retrieve the minimum and maximum amount from the user form
+        try:
+            min_filter = float(request.form['min_amount'])
+            max_filter = float(request.form['max_amount'])
+        except ValueError:
+            return {"message": "Invalid input. Please enter numeric values for the amount filters."}, 400
+
+        # Create the filtered transaction list.
+        # This could be made more efficient using list comprehension
+        filtered_transactions = [] # Initialize as a list
+        for transaction in transactions:
+            if transaction['amount'] >= min_filter and transaction['amount'] <= max_filter:
+                filtered_transactions.append(transaction)
+        return render_template('transactions.html', transactions=filtered_transactions)
+
+
 # Run the Flask app
 if __name__ == "__main__":
     app.run(debug=True)
