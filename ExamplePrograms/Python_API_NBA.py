@@ -2,8 +2,6 @@ from nba_api.stats.static import teams
 import matplotlib.pyplot as plt
 import pandas as pd
 
-print("Hello World")
-
 # Merge a list of dictionaries into a single dictionary
 # where each key corresponds to a list of values from the dictionaries
 def one_dict(list_dict):
