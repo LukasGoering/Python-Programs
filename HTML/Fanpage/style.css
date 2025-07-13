@@ -1,0 +1,76 @@
+
+body {
+    background-image: url('https://www.pixground.com/wp-content/uploads/2023/08/Taylor-Swift-4K-Wallpaper-1081x608.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: rgba(255,255,255,0.85);
+    padding: 1em 0;
+    text-align: center;
+    margin-bottom: 1em;
+}
+nav {
+    background: rgba(245,245,245,0.85);
+    padding: 0.5em 0;
+    text-align: center;
+    margin-bottom: 1em;
+}
+nav .menu a {
+    color: #b91d47;
+    text-decoration: none;
+    margin: 0 1em;
+    font-weight: bold;
+}
+nav .menu a:hover {
+    text-decoration: underline;
+}
+article, section {
+    background: rgba(255,255,255,0.92);
+    margin: 1em auto;
+    padding: 1em 2em;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+h1, h2 {
+    color: #b91d47;
+}
+ul {
+    padding-left: 1.5em;
+}
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 0;
+}
+figure img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+figcaption {
+    margin-top: 0.5em;
+    font-style: italic;
+    color: #444;
+}
+aside {
+    background: #f9f2f4;
+    border-left: 4px solid #b91d47;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 6px;
+}
+a {
+    color: #1a0dab;
+}
+a:visited {
+    color: #660099;
+}
